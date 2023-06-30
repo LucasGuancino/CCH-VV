@@ -8,13 +8,15 @@ describe('Automação para fazer um pedido no AiqFome', () => {
     cy.get('#buttonSelecionarCidade').click();
     cy.get('#cidades18 > :nth-child(32) > .blue-text').click();
     cy.get('#burger-imagem').click();
-    cy.scrollTo('top');
-    cy.wait(1000);
-    cy.get('#campanha19loja104939').click();
-    cy.get('#nome-itens-953735 > :nth-child(3) > :nth-child(1) > div.col-12').scrollIntoView();
-    cy.wait(1000)
-    cy.get('#nome-itens-953735 > :nth-child(3) > :nth-child(1) > div.col-12').click();
-    cy.wait(1000);
+    cy.get('#campanha150loja101535').scrollIntoView();
+    cy.wait(1500)
+    cy.get('#campanha150loja101535').click();
+    cy.get('#nome-itens-896601 > :nth-child(2) > :nth-child(1) > div.col-12').scrollIntoView();
+    cy.get('#nome-itens-896601 > :nth-child(2) > :nth-child(1) > div.col-12').click();
+    cy.scrollTo('bottom');
+    cy.wait(1500);
+    cy.get('#add-3-0 > .img-plus-obg').click();
+    cy.wait(1500);
     cy.get('#addi_btn').click();
     cy.wait(1000);
     cy.get('#ticket-btn').click();
